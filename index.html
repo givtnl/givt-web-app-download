@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Redirect Page</title>
+    <script>
+        function redirectToStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=net.givtapp.kids";
+            }
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/app/id1658797002";
+            }
+            else {
+                window.location.href = "https://www.givt.com";
+            }
+        }
+    </script>
+</head>
+
+<body onload="redirectToStore()">
+    <h1>Redirecting...</h1>
+</body>
+
+</html>
